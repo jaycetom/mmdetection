@@ -1,7 +1,7 @@
 ## 依赖
 
 - Linux 和 macOS （Windows 理论上支持）
-- Python 3.6+
+- Python 3.7 +
 - PyTorch 1.3+
 - CUDA 9.2+ （如果基于 PyTorch 源码安装，也能够支持 CUDA 9.0）
 - GCC 5+
@@ -9,41 +9,49 @@
 
 MMDetection 和 MMCV 版本兼容性如下所示，需要安装正确的 MMCV 版本以避免安装出现问题。
 
-| MMDetection 版本 |          MMCV 版本           |
-| :------------: | :------------------------: |
-|     master     | mmcv-full>=1.3.17, \<1.6.0 |
-|     2.25.0     | mmcv-full>=1.3.17, \<1.6.0 |
-|     2.24.1     | mmcv-full>=1.3.17, \<1.6.0 |
-|     2.24.0     | mmcv-full>=1.3.17, \<1.6.0 |
-|     2.23.0     | mmcv-full>=1.3.17, \<1.5.0 |
-|     2.22.0     | mmcv-full>=1.3.17, \<1.5.0 |
-|     2.21.0     | mmcv-full>=1.3.17, \<1.5.0 |
-|     2.20.0     | mmcv-full>=1.3.17, \<1.5.0 |
-|     2.19.1     | mmcv-full>=1.3.17, \<1.5.0 |
-|     2.19.0     | mmcv-full>=1.3.17, \<1.5.0 |
-|     2.18.1     | mmcv-full>=1.3.17, \<1.4.0 |
-|     2.18.0     | mmcv-full>=1.3.14, \<1.4.0 |
-|     2.17.0     | mmcv-full>=1.3.14, \<1.4.0 |
-|     2.16.0     | mmcv-full>=1.3.8, \<1.4.0  |
-|     2.15.1     | mmcv-full>=1.3.8, \<1.4.0  |
-|     2.15.0     | mmcv-full>=1.3.8, \<1.4.0  |
-|     2.14.0     | mmcv-full>=1.3.8, \<1.4.0  |
-|     2.13.0     | mmcv-full>=1.3.3, \<1.4.0  |
-|     2.12.0     | mmcv-full>=1.3.3, \<1.4.0  |
-|     2.11.0     | mmcv-full>=1.2.4, \<1.4.0  |
-|     2.10.0     | mmcv-full>=1.2.4, \<1.4.0  |
-|     2.9.0      | mmcv-full>=1.2.4, \<1.4.0  |
-|     2.8.0      | mmcv-full>=1.2.4, \<1.4.0  |
-|     2.7.0      | mmcv-full>=1.1.5, \<1.4.0  |
-|     2.6.0      | mmcv-full>=1.1.5, \<1.4.0  |
-|     2.5.0      | mmcv-full>=1.1.5, \<1.4.0  |
-|     2.4.0      | mmcv-full>=1.1.1, \<1.4.0  |
-|     2.3.0      |      mmcv-full==1.0.5      |
-|    2.3.0rc0    |      mmcv-full>=1.0.2      |
-|     2.2.1      |        mmcv==0.6.2         |
-|     2.2.0      |        mmcv==0.6.2         |
-|     2.1.0      |   mmcv>=0.5.9, \<=0.6.1    |
-|     2.0.0      |   mmcv>=0.5.1, \<=0.5.8    |
+| MMDetection 版本 |         MMCV 版本          |
+| :--------------: | :------------------------: |
+|      master      | mmcv-full>=1.3.17, \<1.8.0 |
+|      2.28.2      | mmcv-full>=1.3.17, \<1.8.0 |
+|      2.28.1      | mmcv-full>=1.3.17, \<1.8.0 |
+|      2.28.0      | mmcv-full>=1.3.17, \<1.8.0 |
+|      2.27.0      | mmcv-full>=1.3.17, \<1.8.0 |
+|      2.26.0      | mmcv-full>=1.3.17, \<1.8.0 |
+|      2.25.3      | mmcv-full>=1.3.17, \<1.7.0 |
+|      2.25.2      | mmcv-full>=1.3.17, \<1.7.0 |
+|      2.25.1      | mmcv-full>=1.3.17, \<1.6.0 |
+|      2.25.0      | mmcv-full>=1.3.17, \<1.6.0 |
+|      2.24.1      | mmcv-full>=1.3.17, \<1.6.0 |
+|      2.24.0      | mmcv-full>=1.3.17, \<1.6.0 |
+|      2.23.0      | mmcv-full>=1.3.17, \<1.5.0 |
+|      2.22.0      | mmcv-full>=1.3.17, \<1.5.0 |
+|      2.21.0      | mmcv-full>=1.3.17, \<1.5.0 |
+|      2.20.0      | mmcv-full>=1.3.17, \<1.5.0 |
+|      2.19.1      | mmcv-full>=1.3.17, \<1.5.0 |
+|      2.19.0      | mmcv-full>=1.3.17, \<1.5.0 |
+|      2.18.1      | mmcv-full>=1.3.17, \<1.4.0 |
+|      2.18.0      | mmcv-full>=1.3.14, \<1.4.0 |
+|      2.17.0      | mmcv-full>=1.3.14, \<1.4.0 |
+|      2.16.0      | mmcv-full>=1.3.8, \<1.4.0  |
+|      2.15.1      | mmcv-full>=1.3.8, \<1.4.0  |
+|      2.15.0      | mmcv-full>=1.3.8, \<1.4.0  |
+|      2.14.0      | mmcv-full>=1.3.8, \<1.4.0  |
+|      2.13.0      | mmcv-full>=1.3.3, \<1.4.0  |
+|      2.12.0      | mmcv-full>=1.3.3, \<1.4.0  |
+|      2.11.0      | mmcv-full>=1.2.4, \<1.4.0  |
+|      2.10.0      | mmcv-full>=1.2.4, \<1.4.0  |
+|      2.9.0       | mmcv-full>=1.2.4, \<1.4.0  |
+|      2.8.0       | mmcv-full>=1.2.4, \<1.4.0  |
+|      2.7.0       | mmcv-full>=1.1.5, \<1.4.0  |
+|      2.6.0       | mmcv-full>=1.1.5, \<1.4.0  |
+|      2.5.0       | mmcv-full>=1.1.5, \<1.4.0  |
+|      2.4.0       | mmcv-full>=1.1.1, \<1.4.0  |
+|      2.3.0       |      mmcv-full==1.0.5      |
+|     2.3.0rc0     |      mmcv-full>=1.0.2      |
+|      2.2.1       |        mmcv==0.6.2         |
+|      2.2.0       |        mmcv==0.6.2         |
+|      2.1.0       |   mmcv>=0.5.9, \<=0.6.1    |
+|      2.0.0       |   mmcv>=0.5.1, \<=0.5.8    |
 
 \*\*注意：\*\*如果已经安装了 mmcv，首先需要使用 `pip uninstall mmcv` 卸载已安装的 mmcv，如果同时安装了 mmcv 和 mmcv-full，将会报 `ModuleNotFoundError` 错误。
 
@@ -87,7 +95,7 @@ pip install -v -e .
    conda install pytorch cudatoolkit=10.1 torchvision -c pytorch
    ```
 
-   `例 2` 例如在 `/usr/local/cuda` 下安装了 CUDA 9.2， 并想安装 PyTorch 1.3.1，则需要安装支持 CUDA 9.2  的预构建 PyTorch：
+   `例 2` 例如在 `/usr/local/cuda` 下安装了 CUDA 9.2， 并想安装 PyTorch 1.3.1，则需要安装支持 CUDA 9.2 的预构建 PyTorch：
 
    ```shell
    conda install pytorch=1.3.1 cudatoolkit=9.2 torchvision=0.4.2 -c pytorch
@@ -178,7 +186,7 @@ MIM 能够自动地安装 OpenMMLab 的项目以及对应的依赖包。
 
 (2) 如果希望使用 `opencv-python-headless` 而不是 `opencv-python`， 可以在安装 MMCV 之前安装；
 
-(3) 一些安装依赖是可以选择的。例如只需要安装最低运行要求的版本，则可以使用 `pip install -v -e .` 命令。如果希望使用可选择的像 `albumentations` 和 `imagecorruptions` 这种依赖项，可以使用 `pip install -r requirements/optional.txt` 进行手动安装，或者在使用 `pip` 时指定所需的附加功能（例如 `pip install -v -e .[optional]`），支持附加功能的有效键值包括  `all`、`tests`、`build` 以及 `optional` 。
+(3) 一些安装依赖是可以选择的。例如只需要安装最低运行要求的版本，则可以使用 `pip install -v -e .` 命令。如果希望使用可选择的像 `albumentations` 和 `imagecorruptions` 这种依赖项，可以使用 `pip install -r requirements/optional.txt` 进行手动安装，或者在使用 `pip` 时指定所需的附加功能（例如 `pip install -v -e .[optional]`），支持附加功能的有效键值包括 `all`、`tests`、`build` 以及 `optional` 。
 
 (4) 如果希望使用 `albumentations`，我们建议使用 `pip install -r requirements/albu.txt` 或者 `pip install -U albumentations --no-binary qudida,albumentations` 进行安装。 如果简单地使用 `pip install albumentations>=0.3.2` 进行安装，则会同时安装 `opencv-python-headless`（即便已经安装了 `opencv-python` 也会再次安装）。我们建议在安装 `albumentations` 后检查环境，以确保没有同时安装 `opencv-python` 和 `opencv-python-headless`，因为同时安装可能会导致一些问题。更多细节请参考[官方文档](https://albumentations.ai/docs/getting_started/installation/#note-on-opencv-dependencies)。
 
@@ -186,7 +194,7 @@ MIM 能够自动地安装 OpenMMLab 的项目以及对应的依赖包。
 
 我们的代码能够建立在只使用 CPU 的环境（CUDA 不可用）。
 
-在CPU模式下，可以进行模型训练（需要 MMCV 版本 >= 1.4.4)、测试或者推理，然而以下功能将在 CPU 模式下不能使用：
+在 CPU 模式下，可以进行模型训练（需要 MMCV 版本 >= 1.4.4)、测试或者推理，然而以下功能将在 CPU 模式下不能使用：
 
 - Deformable Convolution
 - Modulated Deformable Convolution
@@ -203,16 +211,16 @@ MIM 能够自动地安装 OpenMMLab 的项目以及对应的依赖包。
 
 因此，如果尝试使用包含上述操作的模型进行训练/测试/推理，将会报错。下表列出了由于依赖上述算子而无法在 CPU 上运行的相关模型：
 
-|                           操作                            |                                        模型                                         |
-| :-----------------------------------------------------: | :-------------------------------------------------------------------------------: |
+|                          操作                           |                                           模型                                           |
+| :-----------------------------------------------------: | :--------------------------------------------------------------------------------------: |
 | Deformable Convolution/Modulated Deformable Convolution | DCN、Guided Anchoring、RepPoints、CentripetalNet、VFNet、CascadeRPN、NAS-FCOS、DetectoRS |
-|                      MaskedConv2d                       |                                 Guided Anchoring                                  |
-|                         CARAFE                          |                                      CARAFE                                       |
-|                      SyncBatchNorm                      |                                      ResNeSt                                      |
+|                      MaskedConv2d                       |                                     Guided Anchoring                                     |
+|                         CARAFE                          |                                          CARAFE                                          |
+|                      SyncBatchNorm                      |                                         ResNeSt                                          |
 
 ### 另一种选择： Docker 镜像
 
-我们提供了 [Dockerfile](https://github.com/open-mmlab/mmdetection/blob/master/docker/Dockerfile) 来生成镜像，请确保 [docker](https://docs.docker.com/engine/install/)  的版本  >= 19.03。
+我们提供了 [Dockerfile](https://github.com/open-mmlab/mmdetection/blob/master/docker/Dockerfile) 来生成镜像，请确保 [docker](https://docs.docker.com/engine/install/) 的版本 >= 19.03。
 
 ```shell
 # 基于 PyTorch 1.6, CUDA 10.1 生成镜像
